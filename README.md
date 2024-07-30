@@ -35,3 +35,16 @@ Haskell while blocking on foreign calls to the gRPC library. If not using code
 generation, the recommended place to start is in the
 `Network.GRPC.HighLevel.Server.Unregistered` module, where `serverLoop` provides
 a handler loop.
+
+
+Após dar git clone, executar na sequencia:
+-----------------
+installar nix: sh <(curl -L https://nixos.org/nix/install) --no-daemon
+adicionar nix ao path: export PATH=$HOME/.nix-profile/bin:$PATH
+Carregar configuração do nix: source ~/.bashrc
+Verificar instalação do nix: nix-env --version
+Iniciar o nix: nix-shell
+Configurar o projeto: cabal configure --enable-tests
+Construir o projeto: cabal build
+executar tests: cabal test
+
